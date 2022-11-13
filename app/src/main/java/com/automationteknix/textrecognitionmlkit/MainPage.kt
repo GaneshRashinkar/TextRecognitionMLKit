@@ -28,7 +28,7 @@ class MainPage : AppCompatActivity() {
             startActivity(Intent(this,EnterTextActivity::class.java))
         }
     }
-
+// just making change to revert git commit
     //toggle was not working so i implemented this method
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return super.onOptionsItemSelected(item)
