@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TextRecognitionMLKit</string>
+    <string name="open">drawer open</string>
+    <string name="close">drawer close</string>
+
+    <string name="about_app">
+        Hi, I first want to thank you for installing my application.
+        I have created this app to demonstrate how text recognition works.
+        In this app you have to enter any text to count and click image of paragraph or any text.
+        this app will count that text in image for you. This is just demo of what text recognition do.
+        We can used this feature for many kind of tasks. Following are example
+        1. In banking application you can process checkbook and other kind of forms.
+        2. I have implemented this feature in engine manufacturing plant to match engine number with QR Code of that engine.
+        3. You can use text recognition to process scanned documents.
+    </string>
+</resources>
