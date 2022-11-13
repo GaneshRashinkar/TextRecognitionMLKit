@@ -13,16 +13,17 @@ class MainPage : AppCompatActivity() {
     lateinit var mBinding: ActivityMainPageBinding
     lateinit var toggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
-        mBinding = ActivityMainPageBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        val toolbar=mBinding.toolbar
+        mBinding = ActivityMainPageBinding.inflate(layoutInflater)
+        val toolbar=findViewById<Toolbar>(R.id.toolbar)
         getSupportActionBar()?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM)
-        setSupportActionBar(toolbar.root)
+        setSupportActionBar(toolbar)
         toggle=ActionBarDrawerToggle(this,mBinding.root, R.string.open,R.string.close)
         toggle.drawerArrowDrawable.color=resources.getColor(R.color.white)
         setContentView(mBinding.root)
         mBinding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         mBinding.btnNext.setOnClickListener {
             startActivity(Intent(this,EnterTextActivity::class.java))
         }
@@ -32,4 +33,5 @@ class MainPage : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return super.onOptionsItemSelected(item)
     }
+
 }
